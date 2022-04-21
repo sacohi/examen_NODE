@@ -1,0 +1,119 @@
+###
+GET http://localhost:3000/api/clientes
+
+###
+GET http://localhost:3000/api/clientes/1
+
+###
+POST http://localhost:3000/api/clientes
+Content-Type: application/json
+
+{
+  "nombre": "Javier",
+  "apellidos": "López Manchado",
+  "direccion": "Calle de Javier 5 Madrid",
+  "telefono": 689893005,
+  "fecha_nacimiento": "1989-01-25",
+  "dni_pasaporte": "25552225J",
+  "email": "javier@gmail.com"
+}
+
+
+###
+PUT http://localhost:3000/api/clientes/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "nombre": "Pedro",
+  "apellidos": "Ruiz Ortega",
+  "direccion": "Calle de Pedro 25 BERLIN",
+  "telefono": 689893111,
+  "fecha_nacimiento": "1968-04-22",
+  "dni_pasaporte": "11111111P",
+  "email": "pedro@gmail.com"
+}
+
+
+###
+DELETE http://localhost:3000/api/clientes/7
+
+###
+GET http://localhost:3000/api/paquetes
+
+###
+GET http://localhost:3000/api/paquetes/1
+
+###
+POST http://localhost:3000/api/paquetes
+Content-Type: application/json
+
+{
+  "ciudad": "Conchinchina",
+  "latitud": 31.5085,
+  "longitud": -2.1257,
+  "pais": "China",
+  "texto_presentacion": "Esto es otra prueba para ver como se puede añadir un nuevo paquete vacacional a la base de datos desde peticiones.rest"
+}
+
+
+###
+PUT http://localhost:3000/api/paquetes/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "ciudad": "Londres",
+  "latitud": 51.5085,
+  "longitud": -0.1257,
+  "pais": "Reino Unido",
+  "texto_presentacion": "Londres, AHORA SI QUE ME LO VOY A INVENTAR TODO PORQUE QUIERO PROBAR COMO SE ACTUALIZA ESTE PAQUETE DE VAIJES A LONDRES"
+}
+
+
+###
+DELETE http://localhost:3000/api/paquetes/6
+
+###
+GET http://localhost:3000/api/reservas
+
+###
+GET http://localhost:3000/api/reservas/1
+
+###
+POST http://localhost:3000/api/reservas
+Content-Type: application/json
+
+{
+    "vuelo_ida": "TAI5555",
+    "vuelo_vuelta": "TAI6777",
+    "hotel": "Hotel de Tailandia",
+    "direccion": "Calle de Tailandia 34",
+    "seguro_medico": "si",
+    "fecha_ida": "2022-08-01",
+    "fecha_vuelta": "2022-08-16",
+    "clientes_id": 5,
+    "paquete_id": 4
+  }
+
+
+###
+PUT http://localhost:3000/api/reservas/6
+Content-Type: application/json
+
+{
+    "vuelo_ida": "MAD3434",
+    "vuelo_vuelta": "ROM6704",
+    "hotel": "Hotel de Roma",
+    "direccion": "Calle de Roma 32",
+    "seguro_medico": "si",
+    "fecha_ida": "2022-11-10",
+    "fecha_vuelta": "2022-11-16",
+    "clientes_id": 2,
+    "paquete_id": 2
+  }
+
+
+###
+DELETE http://localhost:3000/api/reservas/11
+

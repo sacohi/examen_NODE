@@ -1,0 +1,36 @@
+<h2 class="text-center my-4">Listado de Clientes</h2>
+<div class="d-flex justify-content-center my-4">
+    <a href="/clientes/new/" class="btn btn-success btn-sm">Crear Nuevo Cliente</a>
+</div>
+<table class="table table-striped">
+    <thead class="text-center">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+            <th>Fecha de nacimiento</th>
+            <th>Dni/Pasaporte</th>
+            <th>Email</th>
+            <th>Actualizar/Borrar</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {{#each clientes as |cliente|}}
+        <tr>
+            <td>{{cliente.nombre}}</td>
+            <td>{{cliente.apellidos}}</td>
+            <td>{{cliente.direccion}}</td>
+            <td>{{cliente.telefono}}</td>
+            <td>{{cliente.fecha_nacimiento}}</td>
+            <td>{{cliente.dni_pasaporte}}</td>
+            <td>{{cliente.email}}</td>
+           <td>
+               <a href="/clientes/edit/{{cliente.id}}" class="btn btn-warning btn-sm mb-2">Actualizar</a>
+                <a href="/clientes/delete/{{cliente.id}}" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro?')">Borrar</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

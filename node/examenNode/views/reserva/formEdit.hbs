@@ -1,0 +1,41 @@
+<h2 class="text-center my-4">Actualización de Reserva</h2>
+<form method="POST" action="/reservas/update">
+    <div class="form-group mb-3">
+        <label class="form-label">Vuelo IDA</label>
+        <input type="text" name="vuelo_ida" id="vuelo_ida" class="form-control" value="{{reserva.vuelo_ida}}">
+    </div>
+    <div class="form-group mb-3">
+        <label class="form-label">Vuelo VUELTA</label>
+        <input type="text" name="vuelo_vuelta" id="vuelo_vuelta" class="form-control" value="{{reserva.vuelo_vuelta}}">
+    </div>
+    <div class="form-group mb-3">
+        <label class="form-label">Hotel</label>
+        <input type="text" name="hotel" id="hotel" class="form-control" value="{{reserva.hotel}}">
+    </div>
+    <div class="form-group mb-3">
+        <label class="form-label">Dirección</label>
+        <input type="text" name="direccion" id="direccion" class="form-control" value="{{reserva.direccion}}">
+    </div>
+    <div class="form-group mb-3">
+        <label class="form-label">Seguro Médico (Si/No)</label>
+        <input type="text" name="seguro_medico" id="seguro_medico" class="form-control" value="{{reserva.seguro_medico}}">
+    </div>
+    <div class="form-group mb-3">
+        <label class="form-label">Fecha IDA</label>
+        <input type="date" name="fecha_ida" id="fecha_ida" class="form-control" value="{{reserva.fecha_ida}}">
+    </div>
+     <div class="form-group mb-3">
+        <label class="form-label">Fecha VUELTA</label>
+        <input type="date" name="fecha_vuelta" id="fecha_vuelta" class="form-control" value="{{reserva.fecha_vuelta}}">
+    </div>
+     <div class="form-group mb-3">
+        <label class="form-label">Cliente ID</label>
+        <input type="number" name="clientes_id" id="clientes_id" class="form-control" value="{{reserva.clientes_id}}">
+    </div>
+     <div class="form-group mb-3">
+        <label class="form-label">Paquete ID</label>
+        <input type="number" name="paquete_id" id="paquete_id" class="form-control" value="{{reserva.paquete_id}}">
+    </div>
+    <input type="hidden" name="id" value="{{reserva.id}}">
+    <input type="submit" value="Actualizar" class="btn btn-success mt-4">
+</form>

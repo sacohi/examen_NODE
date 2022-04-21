@@ -1,0 +1,33 @@
+<h2 class="text-center my-4">Lista de paquetes</h2>
+<div class="d-flex justify-content-center my-4">
+    <a href="/paquetes/new/" class="btn btn-success btn-sm">Crear Nuevo Paquete</a>
+</div>
+<table class="table table-striped">
+    <thead class="text-center">
+        <tr>
+            <th>Ciudad</th>
+            <th>Latitud</th>
+            <th>Longitud</th>
+            <th>País</th>
+            <th>Texto de presentación</th>
+            <th>Actualizar/Borrar</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {{#each paquetes as |paquete|}}
+        <tr>
+            <td>{{paquete.ciudad}}</td>
+            <td>{{paquete.latitud}}</td>
+            <td>{{paquete.longitud}}</td>
+            <td>{{paquete.pais}}</td>
+            <td>{{paquete.texto_presentacion}}</td>
+            <td>
+                 <a href="/paquetes/edit/{{paquete.id}}" class="btn btn-warning btn-sm mb-2">Actualizar</a>
+                <a href="/paquetes/delete/{{paquete.id}}" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro?')">Borrar</a>
+            </td>
+           
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

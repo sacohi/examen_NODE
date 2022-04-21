@@ -1,0 +1,40 @@
+<h2 class="text-center my-4">Nueva Reserva</h2>
+<form method="POST" action="/reservas/create">
+    <div class="form-group mb-3">
+        <label class="form-label">Vuelo IDA</label>
+        <input type="text" name="vuelo_ida" id="vuelo_ida" class="form-control">
+    </div>
+    <div class="form-group mb-3">
+        <label class="form-label">Vuelo VUELTA</label>
+        <input type="text" name="vuelo_vuelta" id="vuelo_vuelta" class="form-control">
+    </div>
+    <div class="form-group mb-3">
+        <label class="form-label">Hotel</label>
+        <input type="text" name="hotel" id="hotel" class="form-control">
+    </div>
+    <div class="form-group mb-3">
+        <label class="form-label">Dirección</label>
+        <input type="text" name="direccion" id="direccion" class="form-control">
+    </div>
+    <div class="form-group mb-3">
+        <label class="form-label">Seguro Médico (Si/No)</label>
+        <input type="text" name="seguro_medico" id="seguro_medico" class="form-control">
+    </div>
+    <div class="form-group mb-3">
+        <label class="form-label">Fecha IDA</label>
+        <input type="date" name="fecha_ida" id="fecha_ida" class="form-control">
+    </div>
+     <div class="form-group mb-3">
+        <label class="form-label">Fecha VUELTA</label>
+        <input type="date" name="fecha_vuelta" id="fecha_vuelta" class="form-control">
+    </div>
+     <div class="form-group mb-3">
+        <label class="form-label">Cliente ID</label>
+        <input type="number" name="clientes_id" id="clientes_id" class="form-control">
+    </div>
+     <div class="form-group mb-3">
+        <label class="form-label">Paquete ID</label>
+        <input type="number" name="paquete_id" id="paquete_id" class="form-control">
+    </div>
+    <input type="submit" value="Guardar" class="btn btn-success mt-4">
+</form>

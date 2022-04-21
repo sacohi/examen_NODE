@@ -1,0 +1,40 @@
+<h2 class="text-center my-4">Lista de Reservas</h2>
+<div class="d-flex justify-content-center my-4">
+    <a href="/reservas/new/" class="btn btn-success btn-sm">Crear Nueva Reserva</a>
+</div>
+<table class="table table-striped">
+    <thead class="text-center">
+        <tr>
+            <th>Vuelo Ida</th>
+            <th>Vuelo Vuelta</th>
+            <th>Hotel</th>
+            <th>Dirección</th>
+            <th>Seguro Médico</th>
+            <th>Fecha Ida</th>
+            <th>Fecha Vuelta</th>
+            <th>Cliente ID</th>
+            <th>Paquete ID</th>
+            <th>Actualizar/Borrar</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {{#each reservas as |reserva|}}
+        <tr>
+            <td>{{reserva.vuelo_ida}}</td>
+            <td>{{reserva.vuelo_vuelta}}</td>
+            <td>{{reserva.hotel}}</td>
+            <td>{{reserva.direccion}}</td>
+            <td>{{reserva.seguro_medico}}</td>
+            <td>{{reserva.fecha_ida}}</td>
+            <td>{{reserva.fecha_vuelta}}</td>
+            <td>{{reserva.clientes_id}}</td>
+            <td>{{reserva.paquete_id}}</td>
+           <td>
+               <a href="/reservas/edit/{{reserva.id}}" class="btn btn-warning btn-sm mb-2">Actualizar</a>
+                <a href="/reservas/delete/{{reserva.id}}" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro?')">Borrar</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
